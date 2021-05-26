@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/*Heading*/
+
+body{
+  background: #f4f7f8;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.heading{
+  width: 100vw;
+  background: #FFCC22;
+  height: 3.5rem;
+  padding: 10px 40px;
+}
+
+.heading h1{
+  font-weight: 400;
+}
+
+.heading h1 i{
+  color: #282936;
+  padding-right: 10px;
+}
+
+/*Add Note Styling*/
+
+
+.btn-add{
+  position: fixed;
+  right: 50px;
+  top: 7%;
+}
+
+.btn-add .add{
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  right: 0;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.btn-add .add .btn-text{
+  font-weight: 800;
+  font-size: 20px;
+  color: #282936;
+  z-index: 10;
+  margin-left: 45px;
+  position: absolute;
+  display: flex;
+  margin-top: -15px;
+}
+
+.btn-add .add .circle{
+  width: 40px;
+  height: 40px;
+  background: #FFCC22;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.btn-add .add .circle .arrow{
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  position: absolute;
+  left: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  padding: 10px;
+  z-index: 1;
+}
+
+.arrow::before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #000;
+  border-right: 3px solid #000;
+  transform: rotate(45deg);
+  left: 10px;
+  transition: all 0.2s ease;
+}
+
+.circle:hover{
+  width: 200px;
+  padding-right: 150px;
+}
+
+
+
+
+/*Note Styling*/
+
+#box{
+  margin-top: 100px;
+  width: 100%;
+}
+
+.note{
+  background-color: #FFF;
+  margin: 30px 20px;
+  height: 150px;
+  width: 200px;
+  overflow-y: scroll;
+  margin-top: 2rem;
+  box-shadow:inset 1px 1px 0 rgba(0,0,0,0.1),
+  inset 0 1px 0 rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.2);
+}
+
+.note:nth-child(1),
+.note:nth-child(2),
+.note:nth-child(3),
+.note:nth-child(4){
+  margin-top: 7rem;
+}
+
+.note .operation{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  z-index: 1000;
+}
+
+.note .operation button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  outline: none;
+}
+
+.note textarea{
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  border: none;
+  height: 150px;
+  width: 100%;
+  padding: 20px;
+  font-weight: 600;
+  resize: none;
+}
+
+
+.fa-edit, 
+.fa-trash-alt, .fa-save{
+  color: #fff;
+  padding: 10px;
+  background-color: #2ecc71;
+  border-radius: 50%;
+  transition: 0.1s ease;
+}
+
+.fa-save{
+  color: #fff;
+  background: #282936;
+}
+
+.fa-trash-alt{
+  background-color: #e74c3c;
+}
+
+.fa-edit:hover{
+  background-color: #fff;
+  color: #2ecc71;
+  filter: drop-shadow(0 10px 8px rgba(219,218,218))
+}
+
+.fa-trash-alt:hover{
+  background-color: #fff;
+  color: #e74c3c;
+  filter: drop-shadow(0 10px 8px rgba(219,218,218))
+}
+
+.main{
+  padding: 20px;
+  font-weight: 600;
+}
+
+.hidden{
+  display: none;
+}/*#FFC9008F*/
+
+
+
+@media(max-width: 750px){
+  .note{
+    position: relative;
+    left: 45%;
+    transform: translateX(-50%);
+  }
+  
+  .btn-add{
+    z-index: 10000;
+    margin-top: 60px;
+  }
+}
+
+/*Footer*/
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 2.5rem;
+  background: #FFCC22;
+  text-align: center;
+  padding-top: 10px;
+  z-index: 100000;
+}
+
+footer p{
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
